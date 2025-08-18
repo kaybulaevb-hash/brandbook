@@ -46,9 +46,19 @@ const BrandPage = () => {
           ))}
         </div>
 
-        {section.content.image && (
-          <div className="brand-image">
-            <img src={section.content.image} alt={section.title} />
+        {section.content.images && section.content.images.length > 0 && (
+          <div className="brand-images">
+            <h2 className="images-title">Примеры</h2>
+            <div className="images-grid">
+              {section.content.images.map((image, index) => (
+                <div key={index} className="image-item">
+                  <img src={image.src} alt={image.alt} className="brand-image" />
+                  {image.caption && (
+                    <p className="image-caption">{image.caption}</p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

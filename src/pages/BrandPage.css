@@ -90,16 +90,46 @@
   margin-bottom: 0;
 }
 
-.brand-image {
+.brand-images {
   margin-top: var(--spacing-2xl);
+}
+
+.images-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
   text-align: center;
 }
 
-.brand-image img {
-  max-width: 100%;
-  height: auto;
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.image-item {
+  background: var(--bg-secondary);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.brand-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  background: white;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
 }
 
 .not-found {

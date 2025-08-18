@@ -9,7 +9,11 @@ export interface BrandSection {
       title: string;
       items: string[];
     }[];
-    image?: string;
+    images?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    }[];
   };
 }
 
@@ -91,6 +95,18 @@ export const brandSections: BrandSection[] = [
             'Добавлять тени/градиенты',
             'Размещать на пёстрых фонах'
           ]
+        }
+      ],
+      images: [
+        {
+          src: '/images/logo/logo-main.png',
+          alt: 'Основной логотип Onmyfeet',
+          caption: 'Основная версия логотипа'
+        },
+        {
+          src: '/images/logo/logo-mono.png',
+          alt: 'Монохромный логотип Onmyfeet',
+          caption: 'Монохромная версия для тёмных фонов'
         }
       ]
     }
