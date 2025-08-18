@@ -1,7 +1,8 @@
 /* ONMYFEET Brand Background Styles - Simple Version */
 .app {
   min-height: 100vh;
-  /* Светлый фон без анимаций */
-  background: #ffffff;
+  /* Принудительный белый фон */
+  background: #ffffff !important;
+  background-color: #ffffff !important;
   position: relative;
 }

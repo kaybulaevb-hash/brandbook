@@ -47,9 +47,13 @@
 }
 
 /* Global Styles */
+html {
+  background-color: #ffffff !important;
+}
+
 body {
   font-family: var(--font-primary);
-  /* Убираем background-color, чтобы не перекрывать градиент из App.css */
+  background-color: #ffffff !important;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
