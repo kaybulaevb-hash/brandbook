@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--bg-primary);
+  background-color: #ffffff;
   border-bottom: 1px solid var(--border-color);
   padding: var(--spacing-lg) 0;
 }

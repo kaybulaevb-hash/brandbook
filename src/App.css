@@ -1,10 +1,7 @@
 /* ONMYFEET Brand Background Styles - Simple Version */
 .app {
   min-height: 100vh;
-  /* Простой градиент с фирменными цветами ONMYFEET */
-  background: linear-gradient(135deg, 
-    #000000 0%,           /* Чёрный */
-    #7036FF 50%,          /* Фиолетовый бренда */
-    #F4FD70 100%);        /* Жёлтый бренда */
+  /* Светлый фон без анимаций */
+  background: #ffffff;
   position: relative;
 }
