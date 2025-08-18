@@ -1,5 +1,5 @@
-/* Import Coolvetica Font */
-@import url('/fonts/coolvetica.css');
+/* Coolvetica Font via CDN (временно) */
+@import url('https://fonts.cdnfonts.com/css/coolvetica');
 
 /* ONMYFEET Design Tokens */
 :root {
