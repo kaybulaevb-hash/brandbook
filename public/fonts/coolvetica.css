@@ -1,0 +1,18 @@
+/* Coolvetica Font - Local Files */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./coolvetica-regular.woff2') format('woff2'),
+       url('./coolvetica-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./coolvetica-bold.woff2') format('woff2'),
+       url('./coolvetica-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
