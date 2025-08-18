@@ -23,7 +23,7 @@ export const brandSections: BrandSection[] = [
     slug: 'intro',
     title: 'ДОБРО ПОЖАЛОВАТЬ',
     description: 'О бренде и назначение брендбука',
-    color: '#10B981',
+    color: '#F4FD70',
     category: 'design',
     content: {
       subtitle: 'База знаний бренда Onmyfeet',
@@ -53,7 +53,7 @@ export const brandSections: BrandSection[] = [
     slug: 'colors',
     title: 'ЦВЕТА',
     description: 'Фирменная палитра',
-    color: '#0A84FF',
+    color: '#7036FF',
     category: 'design',
     content: {
       subtitle: 'Основа визуальной идентичности',
@@ -81,7 +81,7 @@ export const brandSections: BrandSection[] = [
     slug: 'fonts',
     title: 'ШРИФТ',
     description: 'Базовая типографика',
-    color: '#34D399',
+    color: '#F4FD70',
     category: 'design',
     content: {
       subtitle: 'Типографическая система бренда',
@@ -109,7 +109,7 @@ export const brandSections: BrandSection[] = [
     slug: 'logo',
     title: 'ЛОГО',
     description: 'Правила использования логотипа',
-    color: '#F59E0B',
+    color: '#7036FF',
     category: 'design',
     content: {
       subtitle: 'Основной знак бренда',

@@ -1,13 +1,15 @@
 .app {
   min-height: 100vh;
+  /* Красивый градиент с фирменными цветами ONMYFEET */
   background: linear-gradient(135deg, 
-    #667eea 0%, 
-    #764ba2 25%, 
-    #f093fb 50%, 
-    #f5576c 75%, 
-    #4facfe 100%);
+    #000000 0%,           /* Чёрный */
+    #1a1a1a 20%,          /* Тёмно-серый */
+    #7036FF 45%,          /* Фиолетовый бренда */
+    #2a2a2a 70%,          /* Серый */
+    #F4FD70 85%,          /* Жёлтый бренда */
+    #000000 100%);        /* Чёрный */
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 20s ease infinite;
   position: relative;
   overflow: hidden;
 }
@@ -18,7 +20,7 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Overlay для читаемости */
+/* Лёгкий overlay для читаемости */
 .app::before {
   content: '';
   position: fixed;
@@ -26,7 +28,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   z-index: -5;
 }
 
