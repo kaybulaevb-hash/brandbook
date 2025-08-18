@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# Брендбук Onmyfeet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-приложение для брендбука компании Onmyfeet с дизайном в стиле ONMYFEET и шрифтом Coolvetica.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** + **TypeScript**
+- **Vite** - быстрая сборка и dev-сервер
+- **React Router** - клиентская маршрутизация
+- **Coolvetica Font** - фирменный шрифт
+- **ONMYFEET Design System** - тёмная тема, градиенты, карточки
 
-## Expanding the ESLint configuration
+## Разработка
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Установка зависимостей
+npm install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Запуск dev-сервера
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Сборка для продакшена
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Предпросмотр сборки
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Деплой на Vercel
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Подключите репозиторий к [Vercel](https://vercel.com)
+2. Vercel автоматически определит Vite проект
+3. Настройки по умолчанию подходят:
+   - **Framework**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Структура
+
+- `src/components/` - React компоненты
+- `src/pages/` - страницы приложения
+- `src/data/` - данные брендбука
+- `vercel.json` - конфигурация для SPA роутинга
+
+## Разделы брендбука
+
+- 🎨 **Цвета** - фирменная палитра
+- 📝 **Шрифт** - типографика Coolvetica
+- 🏷️ **Лого** - правила использования
+- 💬 **Tone of Voice** - стиль коммуникаций
+- ✍️ **Написание названия** - брендинг
+- 📄 **Оформление текстов** - сетка и иерархия
+- 🖼️ **Визуал** - фото и графика
+- 👋 **Добро пожаловать** - введение
