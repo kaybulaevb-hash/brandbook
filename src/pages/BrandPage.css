@@ -26,13 +26,26 @@
 }
 
 .brand-title-section {
-  background: rgba(17, 24, 39, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 4px solid var(--accent-blue);
+  /* Fluid Glass Header */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
   padding: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-title-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 .brand-title {
@@ -41,12 +54,14 @@
   color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
   letter-spacing: 0.03em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .brand-subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);
   margin: 0;
+  opacity: 0.9;
 }
 
 .brand-sections {
@@ -55,12 +70,22 @@
 }
 
 .content-section {
-  background: rgba(17, 24, 39, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Fluid Glass Content */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   padding: var(--spacing-xl);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.content-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .section-title {
