@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -10;
   overflow: hidden;
   background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 30%, #2a2a2a 70%, #0b0b0b 100%);
 }
@@ -15,9 +15,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(11, 11, 11, 0.7);
+  background: rgba(11, 11, 11, 0.5);
   backdrop-filter: blur(1px);
-  z-index: 1;
+  z-index: -9;
 }
 
 .shape-set {
@@ -32,11 +32,12 @@
 
 .floating-shape {
   position: absolute;
-  font-size: 3rem;
-  opacity: 0.2;
+  font-size: 4rem;
+  opacity: 0.4;
   animation: float 15s infinite linear;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
   user-select: none;
+  z-index: -8;
 }
 
 @keyframes float {
@@ -97,8 +98,9 @@
 .geometric-shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.15;
   animation: geometricFloat 20s infinite ease-in-out;
+  z-index: -7;
 }
 
 .geo-1 {
@@ -148,8 +150,9 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
-  opacity: 0.1;
+  opacity: 0.15;
   animation: pulse 8s ease-in-out infinite;
+  z-index: -6;
 }
 
 .orb-1 {

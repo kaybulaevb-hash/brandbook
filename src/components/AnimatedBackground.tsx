@@ -13,7 +13,7 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <div className="animated-background">
+    <div className="animated-background" data-testid="animated-background">
       <div className="background-overlay" />
       
       {/* Анимированные фигуры вместо изображений */}
@@ -35,6 +35,21 @@ const AnimatedBackground = () => {
       <div className="geometric-shape geo-1" />
       <div className="geometric-shape geo-2" />
       <div className="geometric-shape geo-3" />
+      
+      {/* Тестовый элемент для отладки */}
+      <div style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10px',
+        background: 'rgba(255, 0, 0, 0.5)',
+        color: 'white',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        fontSize: '12px',
+        zIndex: 999999
+      }}>
+        BG Active: {currentSet}
+      </div>
     </div>
   );
 };
