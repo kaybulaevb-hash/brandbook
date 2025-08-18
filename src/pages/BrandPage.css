@@ -26,8 +26,11 @@
 }
 
 .brand-title-section {
-  background: var(--bg-secondary);
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--accent-blue);
   padding: var(--spacing-xl);
 }
@@ -52,9 +55,11 @@
 }
 
 .content-section {
-  background: var(--bg-secondary);
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-xl);
 }
 

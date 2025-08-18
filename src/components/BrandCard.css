@@ -1,14 +1,16 @@
 .brand-card {
-  background: linear-gradient(180deg, rgba(31, 41, 55, 0.92) 0%, rgba(31, 41, 55, 0.86) 100%);
+  background: linear-gradient(180deg, rgba(31, 41, 55, 0.85) 0%, rgba(31, 41, 55, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--accent-blue);
   padding: var(--spacing-lg);
   min-height: 150px;
   display: flex;
   flex-direction: column;
   transition: transform 280ms ease, box-shadow 280ms ease, background 280ms ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
