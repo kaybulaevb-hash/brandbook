@@ -3,6 +3,7 @@ export interface BrandSection {
   title: string;
   description: string;
   color: string;
+  category: 'smm' | 'design' | 'sales';
   content: {
     subtitle: string;
     sections: {
@@ -23,6 +24,7 @@ export const brandSections: BrandSection[] = [
     title: 'ДОБРО ПОЖАЛОВАТЬ',
     description: 'О бренде и назначение брендбука',
     color: '#10B981',
+    category: 'design',
     content: {
       subtitle: 'База знаний бренда Onmyfeet',
       sections: [
@@ -52,6 +54,7 @@ export const brandSections: BrandSection[] = [
     title: 'ЦВЕТА',
     description: 'Фирменная палитра',
     color: '#0A84FF',
+    category: 'design',
     content: {
       subtitle: 'Основа визуальной идентичности',
       sections: [
@@ -79,6 +82,7 @@ export const brandSections: BrandSection[] = [
     title: 'ШРИФТ',
     description: 'Базовая типографика',
     color: '#34D399',
+    category: 'design',
     content: {
       subtitle: 'Типографическая система бренда',
       sections: [
@@ -106,6 +110,7 @@ export const brandSections: BrandSection[] = [
     title: 'ЛОГО',
     description: 'Правила использования логотипа',
     color: '#F59E0B',
+    category: 'design',
     content: {
       subtitle: 'Основной знак бренда',
       sections: [
@@ -145,6 +150,7 @@ export const brandSections: BrandSection[] = [
     title: 'TONE OF VOICE',
     description: 'Тон и стиль коммуникаций',
     color: '#EF4444',
+    category: 'smm',
     content: {
       subtitle: 'Как мы говорим с аудиторией',
       sections: [
@@ -172,6 +178,7 @@ export const brandSections: BrandSection[] = [
     title: 'НАПИСАНИЕ НАЗВАНИЯ',
     description: 'Фирменное написание названия бренда',
     color: '#8B5CF6',
+    category: 'smm',
     content: {
       subtitle: 'Правила написания имени бренда',
       sections: [
@@ -199,6 +206,7 @@ export const brandSections: BrandSection[] = [
     title: 'ОФОРМЛЕНИЕ ТЕКСТОВ',
     description: 'Типографика и сетка',
     color: '#06B6D4',
+    category: 'design',
     content: {
       subtitle: 'Структура и иерархия контента',
       sections: [
@@ -226,6 +234,7 @@ export const brandSections: BrandSection[] = [
     title: 'ВИЗУАЛ',
     description: 'Фото, видео и графика',
     color: '#EC4899',
+    category: 'sales',
     content: {
       subtitle: 'Визуальный стиль бренда',
       sections: [
