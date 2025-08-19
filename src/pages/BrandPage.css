@@ -1,6 +1,6 @@
 .brand-page {
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
 }
 
 .brand-content {

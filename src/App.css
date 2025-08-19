@@ -1,8 +1,12 @@
-/* ONMYFEET Brand Background Styles - Simple Version */
+/* ONMYFEET Brand Background Styles - Dark Theme */
 .app {
   min-height: 100vh;
-  /* Принудительный белый фон */
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  /* Тёмный градиентный фон с фирменными цветами */
+  background: linear-gradient(135deg, 
+    #000000 0%,
+    #1a1a1a 30%,
+    #7036FF 60%,
+    #2a2a2a 80%,
+    #000000 100%) !important;
   position: relative;
 }
