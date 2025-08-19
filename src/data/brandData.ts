@@ -87,7 +87,7 @@ export const brandSections: BrandSection[] = [
         {
           title: 'Недопустимые формы',
           items: [
-            '❌ "Safari", "Safari", 'Safari', «Safari»',
+            '❌ "Safari", "Safari", \'Safari\', «Safari»',
             '❌ Использование -, x, +',
             '❌ Двойные кавычки или русские кавычки',
             '❌ Сокращения в названиях'
