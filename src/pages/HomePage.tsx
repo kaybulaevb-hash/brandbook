@@ -8,7 +8,7 @@ import './HomePage.css';
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || 'design');
+  const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || 'general');
 
   useEffect(() => {
     setSearchParams({ category: activeCategory });

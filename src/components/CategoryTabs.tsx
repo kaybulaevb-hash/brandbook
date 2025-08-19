@@ -7,6 +7,7 @@ interface CategoryTabsProps {
 }
 
 const categories = [
+  { id: 'general', name: 'Общее', icon: '📋' },
   { id: 'smm', name: 'СММ', icon: '📱' },
   { id: 'design', name: 'Дизайн', icon: '🎨' },
   { id: 'sales', name: 'Продажи', icon: '💼' }
