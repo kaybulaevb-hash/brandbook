@@ -36,3 +36,4 @@ const CategoryTabs = ({ activeCategory, onCategoryChange }: CategoryTabsProps) =
 };
 
 export default CategoryTabs;
+
