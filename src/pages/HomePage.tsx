@@ -8,10 +8,17 @@ import './HomePage.css';
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || 'general');
+  const [activeCategory, setActiveCategory] = useState(() => {
+    // Проверяем URL параметр, затем localStorage, затем дефолт
+    return searchParams.get('category') || 
+           localStorage.getItem('selectedCategory') || 
+           'general';
+  });
 
   useEffect(() => {
     setSearchParams({ category: activeCategory });
+    // Сохраняем выбранную категорию
+    localStorage.setItem('selectedCategory', activeCategory);
   }, [activeCategory, setSearchParams]);
 
   const filteredSections = brandSections.filter(section => section.category === activeCategory);
