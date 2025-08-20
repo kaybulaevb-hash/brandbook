@@ -7,31 +7,41 @@ const BrandPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const section = brandSections.find(s => s.slug === slug);
 
-  // Функция для форматирования текста с символами списков
+  // Функция для форматирования текста с символами списков и HTML
   const formatText = (text: string) => {
+    // Проверяем, есть ли HTML теги
+    if (text.includes('<a href')) {
+      return <div dangerouslySetInnerHTML={{ __html: text }} />;
+    }
+
     // Разбиваем по символам списка
-    const listMarkers = ['—', '❌', '✅', '🟣'];
+    const listMarkers = ['—', '❌', '✅', '🟣', '⚠️'];
     let parts = [text];
     
     listMarkers.forEach(marker => {
       parts = parts.flatMap(part => 
-        part.split(new RegExp(`(${marker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`))
+        typeof part === 'string' 
+          ? part.split(new RegExp(`(${marker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`))
+          : [part]
       );
     });
 
     return parts.map((part, index) => {
-      if (listMarkers.includes(part)) {
-        return <span key={index} className="list-marker">{part}</span>;
+      if (typeof part === 'string') {
+        if (listMarkers.includes(part)) {
+          return <span key={index} className="list-marker">{part}</span>;
+        }
+        
+        // Обработка переносов строк
+        const lines = part.split('\n');
+        return lines.map((line, lineIndex) => (
+          <span key={`${index}-${lineIndex}`}>
+            {line}
+            {lineIndex < lines.length - 1 && <br />}
+          </span>
+        ));
       }
-      
-      // Обработка переносов строк
-      const lines = part.split('\n');
-      return lines.map((line, lineIndex) => (
-        <span key={`${index}-${lineIndex}`}>
-          {line}
-          {lineIndex < lines.length - 1 && <br />}
-        </span>
-      ));
+      return part;
     });
   };
 

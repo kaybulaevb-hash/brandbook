@@ -117,16 +117,18 @@
 }
 
 /* Специальные стили для разных маркеров */
-.list-marker:has-text('❌') {
-  color: #ef4444;
+.list-marker {
+  font-size: 1.1em;
 }
 
-.list-marker:has-text('✅') {
-  color: #10b981;
+.section-item a {
+  color: var(--accent-yellow);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
 }
 
-.list-marker:has-text('🟣') {
-  color: var(--brand-purple);
+.section-item a:hover {
+  opacity: 0.8;
 }
 
 .brand-images {
