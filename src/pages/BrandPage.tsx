@@ -7,6 +7,34 @@ const BrandPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const section = brandSections.find(s => s.slug === slug);
 
+  // Функция для форматирования текста с символами списков
+  const formatText = (text: string) => {
+    // Разбиваем по символам списка
+    const listMarkers = ['—', '❌', '✅', '🟣'];
+    let parts = [text];
+    
+    listMarkers.forEach(marker => {
+      parts = parts.flatMap(part => 
+        part.split(new RegExp(`(${marker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`))
+      );
+    });
+
+    return parts.map((part, index) => {
+      if (listMarkers.includes(part)) {
+        return <span key={index} className="list-marker">{part}</span>;
+      }
+      
+      // Обработка переносов строк
+      const lines = part.split('\n');
+      return lines.map((line, lineIndex) => (
+        <span key={`${index}-${lineIndex}`}>
+          {line}
+          {lineIndex < lines.length - 1 && <br />}
+        </span>
+      ));
+    });
+  };
+
   if (!section) {
     return (
       <div className="brand-page">
@@ -37,11 +65,13 @@ const BrandPage = () => {
           {section.content.sections.map((contentSection, index) => (
             <div key={index} className="content-section">
               <h2 className="section-title">{contentSection.title}</h2>
-              <ul className="section-list">
+              <div className="section-content">
                 {contentSection.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="section-item">{item}</li>
+                  <div key={itemIndex} className="section-item">
+                    {formatText(item)}
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

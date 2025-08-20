@@ -95,29 +95,38 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.section-list {
-  list-style: none;
+.section-content {
   padding: 0;
 }
 
 .section-item {
   color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
-  padding-left: var(--spacing-lg);
-  position: relative;
-  line-height: 1.6;
-}
-
-.section-item::before {
-  content: '•';
-  color: var(--accent-blue);
-  position: absolute;
-  left: 0;
-  font-weight: bold;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+  white-space: pre-line;
 }
 
 .section-item:last-child {
   margin-bottom: 0;
+}
+
+.list-marker {
+  color: var(--accent-yellow);
+  font-weight: bold;
+  margin-right: var(--spacing-xs);
+}
+
+/* Специальные стили для разных маркеров */
+.list-marker:has-text('❌') {
+  color: #ef4444;
+}
+
+.list-marker:has-text('✅') {
+  color: #10b981;
+}
+
+.list-marker:has-text('🟣') {
+  color: var(--brand-purple);
 }
 
 .brand-images {
